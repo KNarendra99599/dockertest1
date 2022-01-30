@@ -25,7 +25,8 @@ pipeline {
             }
 
             stage('Deploy to Docker Host') {
-            steps {     
+            steps {  
+             sh 'sleep 10s'       
              sh 'docker  -H tcp://172.31.1.200:2375 run --rm -dit --name webapp1 --hostname webapp1 -p 9000:80 kasaragadda99599/pipelinetest:v1'
              }
             }
