@@ -34,7 +34,7 @@ pipeline {
 
             stage('Check WebApp Reachability'){
             steps { 
-              sh 'curl http://ec2-54-183-156-204.us-west-1.compute.amazonaws.com:9000'
+              sh 'curl ec2-13-57-18-52.us-west-1.compute.amazonaws.com:9000'
               }
 
             }
